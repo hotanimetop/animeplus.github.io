@@ -39,7 +39,7 @@ var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/16lOAdRoReQ3JbVIKf-_
 
 <script>
 //<![CDATA[
-const pathname = window.location.pathname;
+const pathname = window.location.hash.substring(1);;
 const parts = pathname.split('/').filter(Boolean);
 const page = parts[0];
 const slug = parts[1];
