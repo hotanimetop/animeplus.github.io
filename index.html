@@ -118,6 +118,30 @@
 <!--End: Stylesheet-->
 <script>
 //<![CDATA[
+const pathname = window.location.hash.substring(1);
+const parts = pathname.split('/').filter(Boolean);
+const page = parts[0];
+const slug = parts[1];
+let quoc_gia = null;
+let eps = null;
+if (parts[2]) {
+    const epsPart = parts[2].split('-');
+    if (epsPart.length > 1) {
+        eps = epsPart[1]; 
+    }
+}
+if (slug === 'nhat-ban') {
+    quoc_gia = 'Nhật Bản'; 
+  } else if (slug === 'trung-quoc') {
+    quoc_gia = 'Trung Quốc'; 
+  } else if (slug === 'au-my') {
+    quoc_gia = 'Âu Mỹ'; 
+  }
+
+//]]>
+</script>
+<script>
+//<![CDATA[
 var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/16lOAdRoReQ3JbVIKf-_gXL6JQa7YJ_JkwRo28IT6XS4/edit#gid=0';
 //]]>
 </script>
