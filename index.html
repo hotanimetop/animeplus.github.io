@@ -222,12 +222,24 @@ $('#divslide').sheetrock({
 </ul>
 <script type='text/javascript'>
 //<![CDATA[
-var HRTemplate = Handlebars.compile($('#hr-china').html());
-$('#china').sheetrock({
+if (!page) {
+var HRTemplate = Handlebars.compile($('#new_update').html());
+$('#div_new_update').sheetrock({
   url: mySpreadsheet,
   query: "select * order by X DESC limit 20",
   rowTemplate: HRTemplate
 });
+} else {
+	var single-home = document.getElementById("single-home");
+    if (single-home) {
+        single-home.parentNode.removeChild(single-home); // 
+    }
+	var scrolly = document.getElementById("scrolly");
+    if (scrolly) {
+        scrolly.parentNode.removeChild(scrolly); // 
+    }
+	
+}
 //]]>
 </script>
 </section> 
